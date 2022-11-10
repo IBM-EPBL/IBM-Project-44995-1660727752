@@ -7,16 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/upload.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}" />
-    </head>
+    <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+    ></script>
+  </head>
 
- 
   <body>
     <div class="main">
-      <form action="/action_page.php">
+      <h3 style="text-align: center; font-size: 36px;">Upload Image</h3>
+      <div class="up-img">
+        <img id="uploaded-img" src="#" alt="xray image" />
+      </div>
+      <form method="POST" action="/upload" enctype="multipart/form-data">
         <div>
-          <input type="file" id="my image" name="image" class="file_input">
+          <input type="file" onchange="readURL(this);" id="my image" name="file" class="file_input" required>
           <label for="user">Choose Type:</label>
-          <select name="user" id="user" class="file_select">
+          <select name="type" id="user" class="file_select" required>
             <option value="spiral">spiral</option>
             <option value="wave">wave</option>
           </select>
@@ -24,11 +35,20 @@
         <br><br>
         <input type="submit" value="Submit" class="upload">
       </form>
-      
-    </div>
-  </body>
 
-  <footer>
-    <script src="{{ url_for('static',filename='main.js') }}"></script>
-  </footer>
+    </div>
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+    
+          reader.onload = function (e) {
+            $('#uploaded-img').attr('src', e.target.result);
+          };
+    
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+  </body>
 </html>

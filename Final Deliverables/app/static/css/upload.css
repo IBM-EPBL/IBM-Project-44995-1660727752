@@ -38,3 +38,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.up-img img{
+    width: 256px;
+    height: 256px;
+}

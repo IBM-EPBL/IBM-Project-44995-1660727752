@@ -7,3 +7,4 @@ app.config['SECRET_KEY'] = 'secret_key'
 app.config['UPLOADS_FOLDER'] = './static_files/'
 folder = app.config['UPLOADS_FOLDER']
 
+

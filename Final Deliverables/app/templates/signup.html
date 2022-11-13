@@ -1,6 +1,8 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <style>  
 body{  
@@ -46,7 +48,14 @@ hr {
 }  
 </style>  
 </head>  
-<body>  
+<body> 
+  <header>
+    <div class="links">
+      <div class="link"><a href="/">Home</a></div>
+      <div class="link"><a href="/signup">Register</a></div>
+      <div class="link"><a href="/signin">Login</a></div>
+    </div>
+  </header> 
 <form>  
   <div class="container">  
   <center>  <h1> Registeration Form</h1> </center>  

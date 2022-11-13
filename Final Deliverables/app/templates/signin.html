@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registration Form</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/login_style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}" />
+
 </head>
 <body>
-
+  <header>
+    <div class="links">
+      <div class="link"><a href="/">Home</a></div>
+      <div class="link"><a href="/signup">Register</a></div>
+      <div class="link"><a href="/signin">Login</a></div>
+    </div>
+  </header>
 <div class="wrapper">
     <div class="title">
       Registration Form

@@ -1,0 +1,24 @@
+header{
+    background-color: rgb(27,27,27);
+}
+
+header .links{
+    display: flex;
+    justify-content: center;
+}
+
+header .links .link {
+    margin: 8px 16px;
+    padding: 4px 8px;
+}
+
+header .links .link a{
+    margin: 8px 16px;
+    padding: 4px 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #D53067;
+    border-radius: 4px;
+}
